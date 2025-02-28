@@ -1,66 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f1dda23-67e4-4511-bda0-392728a465e0" name="Changes" comment="Added codes in the various classes">
-      <change afterPath="$PROJECT_DIR$/AdaptiveQuiz.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DatabaseHandler.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Question.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Quiz.py" beforeDir="false" afterPath="$PROJECT_DIR$/Quiz.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizSession.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/User.py" beforeDir="false" />
+    <list default="true" id="4f261bcd-f1aa-4087-9a57-45f2217802c6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdaptiveQuiz.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quiz.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;Roiczone&quot;
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Roiczone"
   }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Roiczone/Python-Final-Project.git&quot;,
-    &quot;accountId&quot;: &quot;1af209f5-0a4e-4a74-999c-d081702ccf84&quot;
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Roiczone/Python-Final-Project.git",
+    "accountId": "1af209f5-0a4e-4a74-999c-d081702ccf84"
   }
-}</component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 4
-}</component>
-  <component name="ProjectId" id="2tD1rvIsJZO0vAMd2asJzI6a7Yf" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="2te9TBrWGaFY4ceubUYL9Yd04oB" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Python.AdaptiveQuiz.executor": "Run",
-    "Python.Main.executor": "Run",
-    "Python.Questions.executor": "Run",
-    "Python.Quiz.executor": "Run",
-    "Python.api.executor": "Run",
+    "Python.app.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
@@ -77,44 +56,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2f1dda23-67e4-4511-bda0-392728a465e0" name="Changes" comment="" />
-      <created>1739872032458</created>
+      <changelist id="4f261bcd-f1aa-4087-9a57-45f2217802c6" name="Changes" comment="" />
+      <created>1740701678371</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1739872032458</updated>
+      <updated>1740701678371</updated>
     </task>
-    <task id="LOCAL-00001" summary="Added codes in the various classes">
-      <option name="closed" value="true" />
-      <created>1739880047186</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1739880047186</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Added codes in the various classes">
-      <option name="closed" value="true" />
-      <created>1739880082545</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1739880082545</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added codes in the various classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added codes in the various classes" />
   </component>
 </project>

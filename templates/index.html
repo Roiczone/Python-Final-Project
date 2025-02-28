@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Application</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <h1>Quiz Application</h1>
+
+    <label for="category">Select Category:</label>
+    <select id="category">
+        {% for category in categories %}
+        <option value="{{ category }}">{{ category }}</option>
+        {% endfor %}
+    </select>
+
+    <div id="quiz-container">
+        <!-- Dynamic questions will be injected here -->
+    </div>
+
+    <div id="score-container">
+        <!-- The user's score will appear here -->
+    </div>
+
+    <div>
+        <button id="submit" disabled>Submit</button>
+        <button id="generate" style="display: none;">Generate New Set of Questions</button>
+    </div>
+
+    <script>
+        let currentDifficulty = 1;
+        let answers = [];
+
+        // Fetch questions based on category and difficulty
+        function fetchQuestions() {
+            const category = $('#category').val();
+
+            $.get(`/get_questions?category=${category}&difficulty=${currentDifficulty}`, function(data) {
+                let quizHTML = '';
+                data.forEach((question, index) => {
+                    quizHTML += `
+                        <div>
+                            <p>${question.question}</p>
+                            ${question.options.map(option => `
+                                <input type="radio" name="q${index}" value="${option}" data-correct="${option === question.answer}">${option}<br>
+                            `).join('')}
+                        </div>
+                    `;
+                });
+                $('#quiz-container').html(quizHTML);
+                // Enable the Submit button once questions are fetched
+                $('#submit').prop('disabled', false);
+            });
+        }
+
+        // Submit the answers and calculate the score
+        $('#submit').click(function() {
+            // Collect answers
+            answers = [];
+            $('input[type="radio"]:checked').each(function() {
+                answers.push({
+                    correct: $(this).data('correct'),
+                });
+            });
+
+            const category = $('#category').val();
+
+            // Disable Submit button after submission
+            $('#submit').prop('disabled', true);
+
+            // Submit answers to backend
+            $.ajax({
+                url: '/submit',
+                method: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({ answers: answers, difficulty: currentDifficulty, category: category }),
+                success: function(response) {
+                    $('#score-container').html(response.score_message);
+                    currentDifficulty = response.next_difficulty;
+                    $('#generate').show();  // Show the Generate button after submission
+                }
+            });
+        });
+
+        // Generate a new set of questions based on score
+        $('#generate').click(function() {
+            // Re-enable the Submit button when generating new questions
+            $('#submit').prop('disabled', false);
+            const category = $('#category').val();
+            $.get(`/get_questions?category=${category}&difficulty=${currentDifficulty}`, function(data) {
+                $('#quiz-container').html('');
+                let quizHTML = '';
+                data.forEach((question, index) => {
+                    quizHTML += `
+                        <div>
+                            <p>${question.question}</p>
+                            ${question.options.map(option => `
+                                <input type="radio" name="q${index}" value="${option}" data-correct="${option === question.answer}">${option}<br>
+                            `).join('')}
+                        </div>
+                    `;
+                });
+                $('#quiz-container').html(quizHTML);
+                $('#score-container').html('');
+                $('#generate').hide();  // Hide the Generate button after generating new questions
+            });
+        });
+
+        // Initialize the quiz
+        $(document).ready(function() {
+            fetchQuestions();
+
+            // Listen for category change to re-fetch questions
+            $('#category').change(function() {
+                fetchQuestions();
+            });
+        });
+    </script>
+
+</body>
+</html>
